@@ -1,0 +1,40 @@
+{
+  "name": "fn-logger",
+  "description": "a logging utility for debugging that pretty prints the name of the function in which the console.log was called",
+  "author": "Patrice Sandhu",
+  "version": "1.0.0",
+  "repository": "https://github.com/pmsandhu/fn-logger",
+  "main": "index.js",
+  "scripts": {
+    "lint": " eslint --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest",
+    "prebuild": "IF EXIST dist rmdir /S/Q dist",
+    "build": "set NODE_ENV=build&& webpack --config webpack.config.js"
+  },
+  "babel": {
+    "env": {
+      "build": {
+        "presets": [
+          ["env", { "targets": { "browser": "last 2 versions" } }]]
+      },
+      "test":  {
+        "presets": [
+          ["env", { "modules": "commonjs", "targets": { "node": "current" } }]]
+      }
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "latest",
+    "babel-jest": "latest",
+    "babel-loader": "latest",
+    "babel-preset-env": "latest",
+    "copy-webpack-plugin": "^4.0.1",
+    "eslint": "latest",
+    "eslint-config-es6": "latest",
+    "eslint-plugin-import": "latest",
+    "jest": "latest",
+    "webpack": "2.2.1"
+  }
+}
