@@ -1,4 +1,4 @@
-####FUNCTION LOGGER
+#### FUNCTION LOGGER
 A browser logging utility that prints the name of the function from where it is called with an assigned pretty color.
 
 To use run: <br/>
@@ -17,7 +17,7 @@ To use run: <br/>
 ```
 ![Alt text](https://8brpwa-ch3301.files.1drv.com/y3mSYu3ecmkbVsGNRb5x0jv3r_6Fn6U6FtVQe7eYYTUnEpGUXe6gulvjZuLrdCLV82i0jSMDa5gzAG2nw71KQgOBggTGMVUfukO7RMRmeGgr34gTTwE2APKvCQhcMnqa2DNjHhTdsEtFPh7FiH3thefGb1PGYxe2o4qWN9e2YgtsVk?width=458&height=28&cropmode=none)
 
-&nbsp;&nbsp;&nbsp;&nbsp;Or import at root of project and then save to window to use without having to import into every file:
+&nbsp;&nbsp;&nbsp;&nbsp;Or import at the root of your project and then save to window to use without having to import it into every file:
 
 ```javascript
     import logger from 'fn-logger'
@@ -51,8 +51,8 @@ To use run: <br/>
 
 <br/>
 ** Supported browsers are Chrome and Opera <br/>
-** Microsoft Edge does not support custom styles for console output so it will default to just printing name of the function in which it was called <br/>
-** This will no print colors in a node environment and will append a %c to the beginning to the function name
+** Microsoft Edge does not support custom styles for console output so it will default to just printing the name of the function in which it was called <br/>
+** This will not print colors in a node environment and will append a %c to the beginning of the function name
 
 
 

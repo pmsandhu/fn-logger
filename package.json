@@ -1,6 +1,6 @@
 {
   "name": "fn-logger",
-  "description": "a logging utility for debugging that pretty prints the name of the function in which the console.log was called",
+  "description": "a logging utility that extends console.log by adding the function name from where the log was called from with an assigned pretty color",
   "author": "Patrice Sandhu",
   "version": "1.0.0",
   "repository": "https://github.com/pmsandhu/fn-logger",
