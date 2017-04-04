@@ -6,7 +6,8 @@
 .gitignore
 
 node_modules
-__test__
+__tests__
 __mocks__
+__coverage__
 src
 

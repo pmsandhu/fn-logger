@@ -6,31 +6,32 @@
   "repository": "https://github.com/pmsandhu/fn-logger",
   "main": "index.js",
   "scripts": {
-    "lint": " eslint --ignore-path .gitignore .",
-    "lint:fix": "npm run lint -- --fix",
-    "test": "jest",
-    "prebuild": "IF EXIST dist rmdir /S/Q dist",
-    "build": "set NODE_ENV=build&& webpack --config webpack.config.js"
+    "lint": " eslint --ignore-path .gitignore . --fix",
+    "test": "npm run test:browser && npm run test:node",
+    "test:browser": "jest browserA.js browserB.js browserC.js --env=jsdom",
+    "test:node": "jest nodeA.js --env=node",
+    "test:coverage": "jest browserA.js browserB.js browserC.js --env=jsdom --coverage && jest nodeA.js --env=node --coverage",
+    "prebuild": "npm run remove:dist && npm run remove:coverage",
+    "remove:dist": "IF EXIST dist rmdir /S/Q dist",
+    "remove:coverage": "IF EXIST __coverage__ rmdir /S/Q __coverage__",
+    "build": "set NODE_ENV=build&& webpack --config webpack.config.js",
+    "run:all": "eslint src --fix && npm run build && npm run test:coverage",
+    "run:all:no-coverage": "eslint src --fix && npm run build && npm run test"
   },
-  "babel": {
-    "env": {
-      "build": {
-        "presets": [
-          ["env", { "targets": { "browser": "last 2 versions" } }]]
-      },
-      "test":  {
-        "presets": [
-          ["env", { "modules": "commonjs", "targets": { "node": "current" } }]]
-      }
-    }
+  "jest": {
+      "collectCoverageFrom":["src/colors.js", "dist/*.js",  "!**/node_modules/**"],
+      "coverageDirectory": "<rootDir>/__coverage__"
   },
   "dependencies": {},
   "devDependencies": {
     "babel-core": "latest",
     "babel-jest": "latest",
     "babel-loader": "latest",
+    "babel-plugin-add-module-exports": "latest",
     "babel-preset-env": "latest",
-    "copy-webpack-plugin": "^4.0.1",
+    "babel-plugin-syntax-dynamic-import": "latest",
+    "copy-pkg-json-webpack-plugin": "latest",
+    "copy-webpack-plugin": "latest",
     "eslint": "latest",
     "eslint-config-es6": "latest",
     "eslint-plugin-import": "latest",

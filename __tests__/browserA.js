@@ -1,13 +1,13 @@
 import logger from '../dist'
-
-const fnExp = () => logger(...arguments)
-const namedFnExp = function namedFunc() { logger() }
-function fnDecl() { logger() }
-function nestedFnCaller() { fnExp() }
+import { fnExp, namedFnExp, fnDecl, nestedFn } from '../__mocks__/browser'
 
 const spy = jest.spyOn(console, 'log')
-let i = 0
+let i = -1
 afterEach(() => i++)
+
+test('should be a browser environment', () => {
+  expect(typeof window).toBe('object')
+})
 
 test('fnExp -- should with function expressions', () => {
   fnExp()
@@ -25,15 +25,16 @@ test('nameFnExp -- should work with named function expressions', () => {
   expect(spy.mock.calls[i][0]).toBe('%cnamedFunc')
 })
 
-test('nestedFnCaller -- should log caller as fnExp even when called from nested function calls', () => {
-  nestedFnCaller()
+test('nestedFn -- should log caller as fnExp even when called from nested function calls', () => {
+  nestedFn()
   expect(spy.mock.calls[i][0]).toBe('%cfnExp')
 })
 
 test('unknown/anonymous caller should return [[Caller]]:<unknown>', () => {
-  const re = /<anonymous>/
-  const shouldEql = '[[Caller]]:<unknown>'
+  const unknown = '[[Caller]]:<unknown>'
   logger()
-  const replaceNodeVal = re.test(spy.mock.calls[i][0]) ? shouldEql : spy.mock.calls[i]
-  expect(replaceNodeVal).toBe(shouldEql)
+  const replaceNodeVal = /<anonymous>/.test(spy.mock.calls[i][0])
+    ? unknown
+    : spy.mock.calls[i]
+  expect(replaceNodeVal).toBe(unknown)
 })

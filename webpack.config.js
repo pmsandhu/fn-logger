@@ -1,32 +1,36 @@
 const webpack = require('webpack')
-const path = require('path')
+const { resolve } = require('path')
+
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const CopyPkgJsonPlugin = require('copy-pkg-json-webpack-plugin')
 
 module.exports = {
-  entry: './src/index.js',
+  devtool: 'source-map',
+  entry: resolve(__dirname, 'src/index.js'),
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
-    library: 'debug-logger'
+    library: 'fn-logger',
+    umdNamedDefine: true
+  },
+  resolve: {
+    modules: [resolve('./src')],
+    extensions: ['.json', '.js']
   },
   module: {
     rules: [{
       test: /\.js$/,
-      exclude: /(\/node_modules\/|tests?|\.spec\.js$)/,
+      exclude: /(node_modules|bower_components)/,
       loader: 'babel-loader'
     }]
   },
   plugins: [
     new webpack.LoaderOptionsPlugin({ minimize: true, debug: false }),
-    new webpack.optimize.UglifyJsPlugin(
-      { beautify: false, mangle: { except: ['exports'] }, sourceMap: true, comments: false }
-    ),
-    new CopyWebpackPlugin([
-      { from: '.npmignore' },
-      { from: 'package.json' },
-      { from: 'README.md' }
-      // { from: '__pics__', to: '__pics__' }
-    ])
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false, mangle: { except: ['exports'] }, sourceMap: true, comments: false
+    }),
+    new CopyWebpackPlugin([{ from: '.npmignore' }, { from: 'README.md' }]),
+    new CopyPkgJsonPlugin({ remove: ['devDependencies', 'scripts', 'jest'] })
   ]
 }

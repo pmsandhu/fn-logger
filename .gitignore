@@ -1,6 +1,9 @@
-node_modules
-dist
 *.log
 .DS_Store
 .idea/
-.idea
+
+
+node_modules
+dist
+__coverage__
+
