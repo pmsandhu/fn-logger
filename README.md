@@ -30,7 +30,7 @@ A JavaScript logging utility that prints the name of the function from where it 
 Node  
 ![Alt text](https://6rtqza-ch3301.files.1drv.com/y4mkhf92pVb7Z-LSWNKGwd38g0lSL6fw4AZTxuNaPEuf-QnZhmeWLeByUGu6kfxPJNaRWFbDUsH3jprQzALiiDYKC8FYXa5leznU2K2tuQotax0b07JTFZnGTRCq6MadMWS-MUpRZSDNAvSPrcQKB_xJhXNgy41s5509KKXfjIkbrBsCed1LGS0OaQjhMYmGMlM6NcoDOVKrbTu54sJ9j_q1A?width=458&height=54&cropmode=none)   
   
-&nbsp;&nbsp;&nbsp;&nbsp;Or import at the root of your project and then save to window to use without having to import it into every file:
+Or import at the root of your project and then save to window to use without having to import it into every file:
 
 ```javascript
     /** using es6 modules in browser environment **/  

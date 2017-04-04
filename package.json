@@ -2,7 +2,7 @@
   "name": "fn-logger",
   "description": "a logging utility that extends console.log by adding the function name from where the log was called from with an assigned pretty color",
   "author": "Patrice Sandhu",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "https://github.com/pmsandhu/fn-logger",
   "main": "index.js",
   "scripts": {
