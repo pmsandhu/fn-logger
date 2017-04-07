@@ -34,8 +34,8 @@ const env = {
       '#074E88', '#FA641B', '#7E8B95', '#C922F2'
     ],
     hashColor(color, name) {
-      const FIXED = 'color:#fff; font-weight:500; padding:0 .15rem; background:'
-      return [`%c${name}`, `${FIXED}${color};`]
+      const style = 'color:#fff; font-weight:500; padding:0 .15rem; background:'
+      return [`%c${name}`, `${style}${color};`]
     },
     concatMethod(classHash, methodHash) {
       return [classHash[0] + methodHash[0], classHash[1], methodHash[1]]
