@@ -7,7 +7,7 @@ A JavaScript logging utility that prints the name of the function from where it 
 
 #### RUN:
 ```bash
-  install fn-logger --save-dev
+npm install fn-logger --save-dev
 ````
 
 #### USAGE 
