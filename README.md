@@ -25,10 +25,10 @@ npm install fn-logger --save-dev
   animal({type: 'cat', color: 'black'})
 ```
  **Browser**  
-![Alt text](https://6ltqza.ch.files.1drv.com/y4mDlvEWvSdTR3UhWBfoj3iXjQIN4WH1zPzIyBg70UzYjsP9pA86OvEGZW2uob9UmUSyXV9d3EDMkFbKZFRXlG3_f96HJ-Q9IhyipZofAPtDnw3SzA-pOIIaBxjBsniTDxsTk0El5kiDb9MpewlypKwpUG-L6vliaDZYSB8BTxjJp4WY4HWZPJ-sY45o1iHK0IZEeaEf70RhQHnmXT5YhfHGg?width=411&height=98&cropmode=none)    
+![Alt text](https://8brpwa.ch.files.1drv.com/y4m_rFgTJ7qxGhMUkuPqbSKsvwVqWEpap5ErWcbzTnzuJI1hcStbiytOfvT5p4o76F7htEPNdYDGcWOpJSGfUCSIdoP98tEvLGLCYcof5271Ch7RkxmsDNDKqKZ98Yp5YsuRf774TXa1e91LhR45yM9MJmDe_2OkVqgkU_kcX8IfIPhMs-D2g1x-4Tm57fvuqQmk8faIORFUdG0F59Yjtko2A?width=458&height=28&cropmode=none)    
 
 **Node**  
-![Alt text](https://8brpwa.ch.files.1drv.com/y4m_rFgTJ7qxGhMUkuPqbSKsvwVqWEpap5ErWcbzTnzuJI1hcStbiytOfvT5p4o76F7htEPNdYDGcWOpJSGfUCSIdoP98tEvLGLCYcof5271Ch7RkxmsDNDKqKZ98Yp5YsuRf774TXa1e91LhR45yM9MJmDe_2OkVqgkU_kcX8IfIPhMs-D2g1x-4Tm57fvuqQmk8faIORFUdG0F59Yjtko2A?width=458&height=28&cropmode=none)   
+![Alt text](https://6rtqza.ch.files.1drv.com/y4mlXjYIwwULocs7aMPCoP9EdimKzizC8AkzcVyDFSJxMLX0bpUdbCnJrXyLqiLPr-sPTcjWqaF43Jx0PJjcewPxrhnxZVrL5R6Cn1W1M7u6p4Ferw44dkQlue3ZrlvGLSJigLHYlE2FNPP-ZzkvEX3xvpCfEfABZP5Kh7xjQDxM42vi2JUNT1c7BbnO7MBu1oAtwOqdBBuROpmghp9cqin7Q?width=458&height=54&cropmode=none)   
   
 Or import at the root of your project and then save to window to use without having to import it into every file:
 
