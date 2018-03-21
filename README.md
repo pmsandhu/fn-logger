@@ -25,7 +25,7 @@ npm install fn-logger --save-dev
   animal({type: 'cat', color: 'black'})
 ```
  **Browser**  
-![Alt text](https://8brpwa-ch3301.files.1drv.com/y3mSYu3ecmkbVsGNRb5x0jv3r_6Fn6U6FtVQe7eYYTUnEpGUXe6gulvjZuLrdCLV82i0jSMDa5gzAG2nw71KQgOBggTGMVUfukO7RMRmeGgr34gTTwE2APKvCQhcMnqa2DNjHhTdsEtFPh7FiH3thefGb1PGYxe2o4qWN9e2YgtsVk?width=458&height=28&cropmode=none)    
+![Alt text](https://6ltqza.ch.files.1drv.com/y4mDlvEWvSdTR3UhWBfoj3iXjQIN4WH1zPzIyBg70UzYjsP9pA86OvEGZW2uob9UmUSyXV9d3EDMkFbKZFRXlG3_f96HJ-Q9IhyipZofAPtDnw3SzA-pOIIaBxjBsniTDxsTk0El5kiDb9MpewlypKwpUG-L6vliaDZYSB8BTxjJp4WY4HWZPJ-sY45o1iHK0IZEeaEf70RhQHnmXT5YhfHGg?width=411&height=98&cropmode=none)    
 
 **Node**  
 ![Alt text](https://6rtqza-ch3301.files.1drv.com/y4mkhf92pVb7Z-LSWNKGwd38g0lSL6fw4AZTxuNaPEuf-QnZhmeWLeByUGu6kfxPJNaRWFbDUsH3jprQzALiiDYKC8FYXa5leznU2K2tuQotax0b07JTFZnGTRCq6MadMWS-MUpRZSDNAvSPrcQKB_xJhXNgy41s5509KKXfjIkbrBsCed1LGS0OaQjhMYmGMlM6NcoDOVKrbTu54sJ9j_q1A?width=458&height=54&cropmode=none)   
