@@ -30,16 +30,12 @@ npm install fn-logger --save-dev
 **Node**  
 ![Alt text](https://6rtqza.ch.files.1drv.com/y4mlXjYIwwULocs7aMPCoP9EdimKzizC8AkzcVyDFSJxMLX0bpUdbCnJrXyLqiLPr-sPTcjWqaF43Jx0PJjcewPxrhnxZVrL5R6Cn1W1M7u6p4Ferw44dkQlue3ZrlvGLSJigLHYlE2FNPP-ZzkvEX3xvpCfEfABZP5Kh7xjQDxM42vi2JUNT1c7BbnO7MBu1oAtwOqdBBuROpmghp9cqin7Q?width=458&height=54&cropmode=none)   
   
-Or import at the root of your project and then save to window to use without having to import it into every file:
-
 ```javascript
     /** using es6 modules in browser environment **/  
-    import logger from 'fn-logger'
-    window.logger = logger //or window.whateverName = logger
-     
-     /** using commonJS in node environment **/ 
+    import logger from 'fn-logger'    
+    
+    /** using commonJS in node environment **/ 
     const logger= require('fn-logger')
-    global.logger = logger
     
     class Cat{
       constructor(name, age, breed) {
